@@ -7,6 +7,8 @@ const path = require("path")
 const Porta = process.env.PORT || 3000
 const cors = require('cors');
 
+
+
 app.use(cors());
 
 /*SERVIDOR/BANCO*/
@@ -15,14 +17,20 @@ Dtbase.sync()
     .then (() => {
     app.listen(Porta, () => { console.log(`Servidor funcionando na porta: ${Porta}`)})
 })
-    .catch(e => console.log (`Alerta! ${e}`) )*/
-
+    .catch(e => console.log (`Alerta! ${e}`) )
+*/
 const apiURL = 'https://cadastro-funcionario.onrender.com';
 
 fetch(`${apiURL}/sua-rota`)
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Erro HTTP: ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => console.log(data))
   .catch(error => console.error('Erro:', error));
+
 
 
     
