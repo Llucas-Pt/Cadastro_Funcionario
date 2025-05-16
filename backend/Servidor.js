@@ -17,7 +17,7 @@ Dtbase.sync()
 })
     .catch(e => console.log (`Alerta! ${e}`) )*/
 
-const apiURL = 'https://cadastro-backend.onrender.com';
+const apiURL = 'https://cadastro-funcionario.onrender.com';
 
 fetch(`${apiURL}/sua-rota`)
   .then(response => response.json())
