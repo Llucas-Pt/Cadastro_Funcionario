@@ -10,12 +10,20 @@ const cors = require('cors');
 app.use(cors());
 
 /*SERVIDOR/BANCO*/
-
+/*
 Dtbase.sync()
     .then (() => {
     app.listen(Porta, () => { console.log(`Servidor funcionando na porta: ${Porta}`)})
 })
-    .catch(e => console.log (`Alerta! ${e}`) )
+    .catch(e => console.log (`Alerta! ${e}`) )*/
+
+const apiURL = 'https://cadastro-backend.onrender.com';
+
+fetch(`${apiURL}/sua-rota`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Erro:', error));
+
 
     
 
