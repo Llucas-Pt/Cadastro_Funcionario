@@ -10,7 +10,8 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/public/Cadastro.html")));
+app.use(express.static(path.join(__dirname, "public")));
+
 
 
 // Rotas da API
