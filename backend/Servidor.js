@@ -13,6 +13,11 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 
+// Redireciona a raiz '/' para o Cadastro.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Cadastro.html"));
+});
+
 
 // Rotas da API
 app.post("/Cadastrotb", (req, res) => {
