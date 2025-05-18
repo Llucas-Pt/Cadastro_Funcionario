@@ -10,7 +10,7 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "/public/Cadastro.html")));
 
 
 // Rotas da API
@@ -96,13 +96,6 @@ fetch(`${apiURL}/sua-rota`)
   .then(data => console.log(data))
   .catch(error => console.error('Erro:', error));
 */
-
-
-    
-
-
-//HTML
-app.use(express.static(path.join(__dirname, "../frontend")));
 
 
 
