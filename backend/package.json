@@ -10,8 +10,8 @@
 
   },
   "scripts": {
-  "start-server": "node Servidor.js",
-  "start-fetch": "node Start.js",
-  "start-all": "npm-run-all --parallel start-server start-fetch"
+  "start": "node Servidor.js"
+
   }
 }
+ 

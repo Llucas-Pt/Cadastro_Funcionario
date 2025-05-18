@@ -10,7 +10,8 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../frontend")));
+app.use(express.static(path.join(__dirname, "/public")));
+
 
 // Rotas da API
 app.post("/Cadastrotb", (req, res) => {
@@ -81,6 +82,8 @@ Dtbase.sync()
 })
     .catch(e => console.log (`Alerta! ${e}`) )
 */
+
+/*
 const apiURL = 'https://cadastro-funcionario.onrender.com';
 
 fetch(`${apiURL}/sua-rota`)
@@ -92,7 +95,7 @@ fetch(`${apiURL}/sua-rota`)
   })
   .then(data => console.log(data))
   .catch(error => console.error('Erro:', error));
-
+*/
 
 
     
