@@ -1,6 +1,6 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-const apiURL = 'https://cadastro-funcionario.onrender.com';
+const apiURL = 'https://cadastro-funcionario-indol.vercel.app';
 
 fetch(`${apiURL}/Cadastrotb`)
   .then(response => {
