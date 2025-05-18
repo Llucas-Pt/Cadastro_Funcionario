@@ -3,7 +3,7 @@ const Cadastrotb = require("./Banco/Cadastrotb");
 const express = require("express");
 const app = express();
 const path = require("path");
-const Porta = process.env.PORT || 3000;
+const Porta = process.env.PORT || 10000;
 const cors = require('cors');
 //const fetch = require('node-fetch');
 
